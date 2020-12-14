@@ -1,3 +1,5 @@
+// Inicio do projeto
+
 let imagemEstrada;
 let imagemAtor;
 
@@ -17,7 +19,7 @@ let yCarro1 = 45;
 function preload() {
   imagemEstrada = loadImage("imagens/estrada.png");
   imagemAtor = loadImage("imagens/ator-1.png");
-  
+
   imagemCarro1 = loadImage("imagens/carro-1.png");
   imagemCarro2 = loadImage("imagens/carro-2.png");
   imagemCarro3 = loadImage("imagens/carro-3.png");
@@ -29,10 +31,10 @@ function setup() {
 
 function draw() {
   background(imagemEstrada);
-  
+
   exibirAtor();
   exibirCarro();
-  
+
   movimentarCarro();
   movimentarAtor();
 }
@@ -47,24 +49,18 @@ function exibirCarro() {
 
 function movimentarCarro() {
   xCarro1 -= 2;
-  
-  if(xCarro1 < larguraCarro * -1) {
-    xCarro1 = 550;     
-  }
 }
 
 function movimentarAtor() {
-  if(keyIsDown(UP_ARROW)) {
+  if (keyIsDown(UP_ARROW)) {
     yAtor -= 2;
-  }
-  else if(keyIsDown(DOWN_ARROW)) {
+  } else if (keyIsDown(DOWN_ARROW)) {
     yAtor += 2;
   }
-  
-  if(keyIsDown(LEFT_ARROW)) {
+
+  if (keyIsDown(LEFT_ARROW)) {
     xAtor -= 2;
-  }
-  else if(keyIsDown(RIGHT_ARROW)) {
+  } else if (keyIsDown(RIGHT_ARROW)) {
     xAtor += 2;
   }
 }
